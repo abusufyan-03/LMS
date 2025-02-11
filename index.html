@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home page</title>
+  <link rel="stylesheet" href="./src/output.css" />
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body>
+  <!-- Header Goes Here -->
+  <header>
+    <!-- Navbar Goes Here -->
+    <nav class="">
+      <div class="nav-container flex justify-between px-4 py-4 border-b">
+        <div class="nav-left flex items-center">
+          <!-- Logo section Goes Here -->
+          <div class="logo flex items-center text-slate-700">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-book-open">
+              <path d="M12 7v14" />
+              <path
+                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+            </svg>
+            <span class="text-[18px] font-bold ml-2 text-slate-900 md:hidden xs:block">Library Management System</span>
+            <span class="text-2xl font-bold ml-2 text-slate-900 xs:hidden md:block">Library Management System</span>
+            <!-- Logo Section ends Here -->
+          </div>
+        </div>
+        <!-- 
+        file to save 'output.css': The content of the file is newer. please compare your version with the file contents or overwrite the content of the file with your changes
+        -->
+
+        <!-- nav right for mobile goes here -->
+        <div class="nav-right lg:hidden">
+          <button id="menuToggle" class="top-4 right-4 z-50 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
+          <!-- Overlay -->
+          <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden backdrop-blur-md"></div>
+
+          <!-- navigation links goes here for mobile-->
+          <div id="menu"
+            class="fixed top-4 right-4 w-64 h-[353px] bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out rounded-lg overflow-hidden invisible opacity-0">
+            <div class="flex flex-col h-full">
+              <div class="flex justify-between items-center p-4 border-b">
+                <h2 class="text-lg font-semibold">Menu</h2>
+                <button id="closeMenu" aria-label="Close menu">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <nav class="flex-grow overflow-y-auto">
+                <ul class="space-y-2 px-4 py-2">
+                  <li>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">About</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Resources</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Contact</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Books</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="p-4 border-t">
+                <div class="flex items-center justify-between">
+                  <!-- <span class="text-sm text-gray-600">Switch theme</span> -->
+                  <!-- <select class="bg-gray-100 border border-gray-300 rounded-md text-sm px-2 py-1">
+                    <option>Light</option>
+                    <option>Dark</option> -->
+                  <!-- </select> -->
+                  <button class="bg-primary hover:text-custom-grey text-white font-bold py-2 px-[25px] border border-primary rounded">
+                    login
+                  </button>
+                  <button class="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-2 px-4 border border-primary hover:border-transparent rounded">
+                    sign up
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- nav right for mobile ends here -->
+
+        <!-- nav right for laptop goes here -->
+        <div class="nav-right-laptop xs:hidden lg:block">
+          <nav class="font-semibold text-sm text-slate-700">
+            <ul class="px-4 py-2 flex gap-4">
+              <li>
+                <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Home</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">About</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Resources</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Books</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- nav right for laptop ends here -->
+      </div>
+      <!-- nav container ends here -->
+    </nav>
+  </header>
+  <main class="bg-slate-50">
+    <!-- Hero section starts here -->
+    <section class="hero-section flex items-center justify-center h-screen bg-white" style="
+          background-image: url('../assets/hero-section-2.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        ">
+      <div class="text-center space-y-6 p-8 rounded-lg">
+        <!-- Heading -->
+        <h1 class="text-5xl font-extrabold text-white leading-tight">
+          Welcome to <span class="text-purple-600">LMS</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-lg text-white max-w-md mx-auto">
+          Empowering knowledge seekers and facilitators in the digital age
+        </p>
+
+        <!-- search bar goes here -->
+        <div class="relative w-full mx-auto xs:max-w-xs sm-m:max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
+          <input type="text" id="Search" placeholder="Search for..."
+            class="w-full rounded-md border border-gray-300 py-2 pl-4 pr-12 shadow-sm xs:text-xs sm-m:text-sm sm:text-base lg:text-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" />
+
+          <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+            <button type="button" class="text-gray-600 hover:text-gray-700 focus:outline-none">
+              <span class="sr-only">Search</span>
+
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-4 h-4 xs:w-4 xs:h-4 sm-m:w-5 sm-m:h-5 sm:w-6 sm:h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg>
+            </button>
+          </span>
+        </div>
+        <!-- search bar ends here -->
+      </div>
+    </section>
+    <!-- Hero section ends here -->
+
+    <!-- Role section goes here -->
+    <section class="py-16">
+      <!-- role's container goes here -->
+      <div class="px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">Choose Your Role</h2>
+        <!-- Grid div goes here -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- student role goes here -->
+          <div class="student border rounded shadow-md bg-white">
+            <div class="heading p-6">
+              <h3 class="flex items-center text-2xl font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-users">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+                <span class="ml-2">Students</span>
+              </h3>
+            </div>
+            <div class="body p-6 pt-0">
+              <p class="text-sm text-text-custom-grey">
+                Access books, manage borrowings, and track your learning
+                journey.
+              </p>
+              <button class="bg-primary text-white rounded-md font-medium w-full mt-4 py-2 hover:bg-primary/90" onclick="window.location.href='./src/student-login.html'">
+                Student Login
+              </button>
+            </div>
+          </div>
+          <!-- student role ends here -->
+          <!-- Librarians role goes here -->
+          <div class="librarain border rounded bg-white">
+            <div class="heading p-6">
+              <h3 class="flex items-center text-2xl font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-book-open">
+                  <path d="M12 7v14" />
+                  <path
+                    d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+                </svg>
+                <span class="ml-2">Librarians</span>
+              </h3>
+            </div>
+            <div class="body p-6 pt-0">
+              <p class="text-sm text-text-custom-grey">
+                Manage inventory, assist students, and maintain the library ecosystem.
+              </p>
+              <button class="bg-primary text-white rounded-md font-medium w-full mt-4 py-2 hover:bg-primary/90" onclick="window.location.href='./src/librarian-login.html'">
+                Librarians Login
+              </button>
+            </div>
+          </div>
+          <!-- Librarains role ends here -->
+          <!-- Admistarators role goes here -->
+          <div class="adminstrators border rounded bg-white">
+            <div class="heading p-6">
+              <h3 class="flex items-center text-2xl font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-shield">
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                </svg>
+                <span class="ml-2">Administrators</span>
+              </h3>
+            </div>
+            <div class="body p-6 pt-0">
+              <p class="text-sm text-text-custom-grey">
+                Oversee operations, manage users, and ensure smooth system functionality.
+              </p>
+              <button class="bg-primary text-white rounded-md font-medium w-full mt-4 py-2 hover:bg-primary/90" onclick="window.location.href='./src/admin-login.html'">
+                Admin Login
+              </button>
+            </div>
+          </div>
+          <!-- administrator role ends here -->
+        </div>
+        <!-- Grid div ends here -->
+      </div>
+      <!-- role's container ends here -->
+    </section>
+    <!-- Role section ends here -->
+
+
+    <!-- Key features section goes here -->
+    <section class="py-16">
+      <!-- key feature's container goes here -->
+      <div class="px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">Key Features</h2>
+        <!-- Grid div goes here -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Advance search goes here -->
+          <div class="student border rounded hover:shadow-md bg-white">
+            <div class="heading p-6">
+              <h3 class="flex items-center text-2xl font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-search">
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.3-4.3" />
+                </svg>
+                <span class="ml-2">Advance Search</span>
+              </h3>
+            </div>
+            <div class="body p-6 pt-0">
+              <p class="text-sm text-text-custom-grey">
+                Easily find books across various categories and subcategories.
+              </p>
+            </div>
+          </div>
+          <!-- Advanced search ends here -->
+          <!-- Real Time Availabilit goes here -->
+          <div class="librarain border rounded bg-white">
+            <div class="heading p-6">
+              <h3 class="flex items-center text-2xl font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                <span class="ml-2">Real-time Availability</span>
+              </h3>
+            </div>
+            <div class="body p-6 pt-0">
+              <p class="text-sm text-text-custom-grey">
+                Check book availability instantly for efficient borrowing.
+              </p>
+            </div>
+          </div>
+          <!-- Real time availability ends here -->
+          <!-- User Management goes here -->
+          <div class="adminstrators border rounded bg-white">
+            <div class="heading p-6">
+              <h3 class="flex items-center text-2xl font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span class="ml-2">Users Management</span>
+              </h3>
+            </div>
+            <div class="body p-6 pt-0">
+              <p class="text-sm text-text-custom-grey">
+                Comprehensive tools for managing students, librarians, and admins.
+              </p>
+            </div>
+          </div>
+          <!-- user management role ends here -->
+
+          <!-- Specialize category goes here -->
+          <div class="border rounded shadow-md bg-white">
+            <div class="heading p-6">
+              <h3 class="flex items-center text-2xl font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                <span class="ml-2">Specialize categories</span>
+              </h3>
+            </div>
+            <div class="body p-6 pt-0">
+              <p class="text-sm text-text-custom-grey">
+                Focus on Computer Science with subcategories like Web Development and Cybersecurity.
+              </p>
+            </div>
+          </div>
+          <!-- special category ends here -->
+          <!-- borrowing History goes here -->
+          <div class="librarain border rounded bg-white">
+            <div class="heading p-6">
+              <h3 class="flex items-center text-2xl font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                <span class="ml-2">Borrowing History</span>
+              </h3>
+            </div>
+            <div class="body p-6 pt-0">
+              <p class="text-sm text-text-custom-grey">
+                Track borrowed books, return dates, and manage fines effortlessly.
+              </p>
+            </div>
+          </div>
+          <!-- Real time availability ends here -->
+          <!-- track based goes here -->
+          <div class="adminstrators border rounded bg-white">
+            <div class="heading p-6">
+              <h3 class="flex items-center text-2xl font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span class="ml-2">Track-Based Access</span>
+              </h3>
+            </div>
+            <div class="body p-6 pt-0">
+              <p class="text-sm text-text-custom-grey">
+                Secure, role-specific access ensuring data privacy and system integrity.
+              </p>
+            </div>
+          </div>
+          <!-- role based ends here -->
+        </div>
+        <!-- Grid div ends here -->
+      </div>
+      <!-- key features container ends here -->
+    </section>
+    <!-- Key features secton ends here -->
+  </main>
+
+  <!-- Footer goes here -->
+  <footer class="bg-primary text-white py-8">
+    <!-- Footer contianer goes here -->
+    <div class="container px-4">
+      <!-- footer grid goes here -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
+
+        <!-- about libraryMS div goes here -->
+         <div>
+          <h3 class="text-lg font-semibold mb-4">About LibraryMS</h3>
+          <p class="font-[50]">Empowering libraries and learners with cutting-edge management solutions.</p>
+         </div>
+         <!-- about libraryMS div ends here -->
+          
+        <!-- quick links div goes here -->
+         <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="font-[50]">
+            <li>Home</li>
+            <li>About</li>
+            <li>Resources</li>
+            <li>Contact</li>
+            <li>Books</li>
+          </ul>
+         </div>
+         <!-- quick link div ends here -->
+
+         <!-- contact div goes here -->
+         <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <p class="font-[50]">Email: support@librarryms.com</p>
+          <p class="font-[50]">Phone: (123) 456-7890</p>
+         </div>
+         <!-- contact div ends here -->
+
+        </div>
+        <!-- footer grid ends here -->
+
+        <div class="mt-8 text-center">
+          <p>&COPY; 2024 LibraryMS. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- footer container ends here -->
+  </footer>
+  <!-- Footer ends here -->
+
+  <script>
+    // JavaScript for menu functionality
+    const menuToggle = document.getElementById("menuToggle");
+    const closeMenu = document.getElementById("closeMenu");
+    const menu = document.getElementById("menu");
+    const overlay = document.getElementById("overlay");
+
+    function toggleMenu() {
+      menu.classList.toggle("translate-x-full");
+      menu.classList.toggle("invisible");
+      menu.classList.toggle("opacity-0");
+      overlay.classList.toggle("hidden");
+    }
+
+    menuToggle.addEventListener("click", toggleMenu);
+    closeMenu.addEventListener("click", toggleMenu);
+    overlay.addEventListener("click", toggleMenu);
+  </script>
+</body>
+
+</html>
